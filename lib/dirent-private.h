@@ -31,7 +31,7 @@ struct gl_directory
   /* Handle, reading the directory, at current position.  */
   HANDLE current;
   /* Found directory entry.  */
-  WIN32_FIND_DATA entry;
+  WIN32_FIND_DATAA entry;
   /* Argument to pass to FindFirstFile.  It consists of the absolutized
      directory name, followed by a directory separator and the wildcards.  */
   char dir_name_mask[1];

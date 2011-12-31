@@ -47,7 +47,7 @@ readdir (DIR *dirp)
     case -1:
       break;
     case 0:
-      if (!FindNextFile (dirp->current, &dirp->entry))
+      if (!FindNextFileA (dirp->current, &dirp->entry))
         {
           switch (GetLastError ())
             {
