@@ -1,0 +1,104 @@
+Gnulib is a collection of source "modules" used to port programs to systems that lack proper implementations of functions that would exist on GNU systems, mostly parts of glibc.
+
+As far as I (Vincent Povirk) can tell, the correct use of gnulib involves autotools, and it's not clear to me how one is meant to use it with MSVC. So I've made copies of .h.in files.
+
+It's intended as a source library, but because the licensing is so confusing I'm building dll's for it, with each function an export in the dll named for its license. That way if you link one you know where you stand.
+
+Projects using gnulib will need to provide a config.h file in their include path (see the one in gnulib/COPKG/gnulib) and add gnulib/lib to their include path as well. See the advice below for any functions you're missing.
+
+When adding new functions, check the files in the modules/ directory for licensing and any other relevant information.
+
+
+Here's a list of functions and where to get them:
+
+
+
+close
+open
+read
+write
+
+MSVC provides these functions, but they're in <io.h>, and most unix software expects to include <unistd.h>. Technically, there may be additional requirements in posix that MSVC does not satisfy (if you know what those are, please specify them here).
+
+If you're not needing to link any gnulib-*.lib files, consider replacing the include when _MSC_VER is defined, to eliminate the build-time dependency.
+
+
+
+
+asprintf
+fprintf
+fwprintf
+printf
+snprintf
+sprintf
+swprintf
+vasnprintf
+vasnwprintf
+vasprintf
+vfprintf
+vfwprintf
+vprintf
+vsnprintf
+vsprintf
+vswprintf
+vwprintf
+wprintf
+
+libintl (part of gettext) provides replacements for all of these functions. The libintl versions support positional argument references, which look like "%2$s", or in some cases maybe "%*1$d". Positional argument references are part of posix, and they're not implemented by MSVC. The replacements will be used in any file that includes libintl.h.
+
+If you just need snprintf and are pretty sure you don't need positional argument references, consider #define snprintf _snprintf.
+
+
+
+
+closedir
+opendir
+readdir
+
+Defined in dirent.h. Use gnulib-lgpl.lib.
+
+
+
+getdelim
+getline
+
+Include gl-stdio.h and link gnulib-lgplv2+.lib.
+
+Since VC has its own stdio.h that I can't redistribute parts of, and I don't know where your version is installed, I can't make stdio.h define these without breaking things.
+
+
+
+
+getopt
+getopt_long
+getopt_long_only
+
+Defined in getopt.h, but projects will usually include unistd.h. Use gnulib-lgplv2+.lib.
+
+
+
+nl_langinfo
+
+Defined in langinfo.h. Use gnulib-lgplv2+.lib.
+
+
+
+regcomp
+regerror
+regexec
+regfree
+
+Defined in regex.h. Use gnulib-lgplv2+.lib. Note that mingw is also missing these functions. It's not clear whether libgnurx should be used or whether we should build a compatible library based on the (presumably better-maintained) implementation in gnulib.
+
+
+
+strcasecmp
+strncasecmp
+
+Defined in strings.h. Use gnulib-lgplv2+.lib.
+
+
+
+strtoull
+
+Use #define strtoull _strtoui64, and include stdio.h if necessary.

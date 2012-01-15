@@ -47,6 +47,8 @@
 # @INCLUDE_NEXT@ @NEXT_UNISTD_H@
 #endif
 
+#include <io.h> // For MSVC versions of open(), close(), read(), and write()
+
 /* Get all possible declarations of gethostname().  */
 #if 0 // @GNULIB_GETHOSTNAME@ && @UNISTD_H_HAVE_WINSOCK2_H@ \
   && !defined _GL_INCLUDING_WINSOCK2_H
@@ -110,7 +112,7 @@
 
 /* Get getopt(), optarg, optind, opterr, optopt.
    But avoid namespace pollution on glibc systems.  */
-#if 0//@GNULIB_UNISTD_H_GETOPT@ && !defined __GLIBC__ && !defined _GL_SYSTEM_GETOPT
+#if 1//@GNULIB_UNISTD_H_GETOPT@ && !defined __GLIBC__ && !defined _GL_SYSTEM_GETOPT
 # include <getopt.h>
 #endif
 

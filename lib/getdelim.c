@@ -25,7 +25,7 @@
    optimizes away the lineptr == NULL || n == NULL || fp == NULL tests below.  */
 #define _GL_ARG_NONNULL(params)
 
-#include <stdio.h>
+#include <gl-stdio.h>
 
 #include <limits.h>
 #include <stdint.h>

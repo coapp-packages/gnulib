@@ -25,6 +25,8 @@
 
 #include <arg-nonnull.h>
 
+#undef __GETOPT_PREFIX
+
 /* The include_next requires a split double-inclusion guard.  We must
    also inform the replacement unistd.h to not recursively use
    <getopt.h>; our definitions will be present soon enough.  */
@@ -125,6 +127,7 @@
 #endif
 
 /* The definition of _GL_ARG_NONNULL is copied here.  */
+#include "arg-nonnull.h"
 
 #ifdef __cplusplus
 extern "C" {

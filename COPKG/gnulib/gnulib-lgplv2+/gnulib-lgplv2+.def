@@ -1,0 +1,17 @@
+EXPORTS
+	getdelim
+	getline
+	getopt
+	getopt_long
+	getopt_long_only
+	nl_langinfo
+	optarg
+	opterr
+	optind
+	optopt
+	regcomp
+	regerror
+	regexec
+	regfree
+	strcasecmp
+	strncasecmp

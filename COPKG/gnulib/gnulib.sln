@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gnulib-lgplv2+", "gnulib-lgplv2+\gnulib-lgplv2+.vcxproj", "{A8F17D12-A393-480D-AE87-148260180748}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gnulib-lgpl", "gnulib-lgpl\gnulib-lgpl.vcxproj", "{AD6DD3CF-EA90-40A7-8B8C-5244D096B9B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8F17D12-A393-480D-AE87-148260180748}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A8F17D12-A393-480D-AE87-148260180748}.Debug|Win32.Build.0 = Debug|Win32
+		{A8F17D12-A393-480D-AE87-148260180748}.Release|Win32.ActiveCfg = Release|Win32
+		{A8F17D12-A393-480D-AE87-148260180748}.Release|Win32.Build.0 = Release|Win32
+		{AD6DD3CF-EA90-40A7-8B8C-5244D096B9B6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AD6DD3CF-EA90-40A7-8B8C-5244D096B9B6}.Debug|Win32.Build.0 = Debug|Win32
+		{AD6DD3CF-EA90-40A7-8B8C-5244D096B9B6}.Release|Win32.ActiveCfg = Release|Win32
+		{AD6DD3CF-EA90-40A7-8B8C-5244D096B9B6}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
