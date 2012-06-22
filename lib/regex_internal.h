@@ -20,6 +20,7 @@
 #ifndef _REGEX_INTERNAL_H
 #define _REGEX_INTERNAL_H 1
 
+#include <gl-common.h>
 #include <assert.h>
 #include <ctype.h>
 #include <stdbool.h>

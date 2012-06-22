@@ -100,6 +100,9 @@
     <None Include="gnulib-lgplv2+.def" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\build-aux\snippet\arg-nonnull.h" />
+    <ClInclude Include="..\..\..\build-aux\snippet\c++defs.h" />
+    <ClInclude Include="..\..\..\build-aux\snippet\warn-on-use.h" />
     <ClInclude Include="..\..\..\lib\alignof.h" />
     <ClInclude Include="..\..\..\lib\dirent.h" />
     <ClInclude Include="..\..\..\lib\getopt.h" />
@@ -110,6 +113,7 @@
     <ClInclude Include="..\..\..\lib\unused-parameter.h" />
     <ClInclude Include="..\..\..\lib\verify.h" />
     <ClInclude Include="..\config.h" />
+    <ClInclude Include="..\gl-common.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

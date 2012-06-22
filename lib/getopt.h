@@ -23,6 +23,7 @@
 #endif
 //@PRAGMA_COLUMNS@
 
+#include <gl-common.h>
 #include <arg-nonnull.h>
 
 #undef __GETOPT_PREFIX

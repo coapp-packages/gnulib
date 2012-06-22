@@ -39,6 +39,8 @@
 
 #define _GL_ALREADY_INCLUDING_STDIO_H
 
+#include <gl-common.h>
+
 /* The include_next requires a split double-inclusion guard.  */
 //#@INCLUDE_NEXT@ @NEXT_STDIO_H@
 #include <stdio.h>
