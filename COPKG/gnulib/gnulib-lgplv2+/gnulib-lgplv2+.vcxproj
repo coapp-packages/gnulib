@@ -40,7 +40,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir);$(SolutionDir)..\..\lib;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir);$(SolutionDir)..\..\lib;$(SolutionDir)..\..\build-aux\snippet;$(IncludePath)</IncludePath>
     <TargetName>$(ProjectName)-vs10d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -104,16 +104,18 @@
     <ClInclude Include="..\..\..\build-aux\snippet\c++defs.h" />
     <ClInclude Include="..\..\..\build-aux\snippet\warn-on-use.h" />
     <ClInclude Include="..\..\..\lib\alignof.h" />
-    <ClInclude Include="..\..\..\lib\dirent.h" />
-    <ClInclude Include="..\..\..\lib\getopt.h" />
-    <ClInclude Include="..\..\..\lib\gl-stdio.h" />
-    <ClInclude Include="..\..\..\lib\langinfo.h" />
-    <ClInclude Include="..\..\..\lib\strings.h" />
-    <ClInclude Include="..\..\..\lib\unistd.h" />
     <ClInclude Include="..\..\..\lib\unused-parameter.h" />
     <ClInclude Include="..\..\..\lib\verify.h" />
+    <ClInclude Include="..\alloca.h" />
     <ClInclude Include="..\config.h" />
+    <ClInclude Include="..\dirent.h" />
+    <ClInclude Include="..\getopt.h" />
     <ClInclude Include="..\gl-common.h" />
+    <ClInclude Include="..\gl-stdio.h" />
+    <ClInclude Include="..\langinfo.h" />
+    <ClInclude Include="..\stdbool.h" />
+    <ClInclude Include="..\strings.h" />
+    <ClInclude Include="..\unistd.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
