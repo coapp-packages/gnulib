@@ -1,0 +1,35 @@
+@import "version.inc";
+@import "compat.inc";
+
+#product-info  {
+    product-name: "gnulib";
+    version: "${package-version}";
+    original-source-location: "git://git.savannah.gnu.org/gnulib.git";
+    original-source-website: "http://www.gnu.org/software/gnulib/";
+    license: "mixed (mostly LGPL and GPL)";
+    packager: "Vincent Povirk <madewokherd@gmail.com>";
+}
+
+
+x86 {
+    compiler: vc10;
+    
+    targets: { 
+        "COPKG\gnulib\Release\gnulib-lgpl.dll",
+        "COPKG\gnulib\Release\gnulib-lgpl.lib",
+        "COPKG\gnulib\Release\gnulib-lgplv2plus.dll",
+        "COPKG\gnulib\Release\gnulib-lgplv2plus.lib",
+    };
+     
+    build-command:@"
+		if ""${BUILT}"" equ ""true"" goto end
+		msbuild /p:Platform=Win32 /p:Configuration=Release COPKG\gnulib\gnulib.sln || goto failed
+:end
+    ";
+     
+    clean-command:@"
+		msbuild /p:Platform=Win32 /p:Configuration=Release /Target:Clean COPKG\gnulib\gnulib.sln
+		rd /S /Q COPKG\gnulib\gnulib-lgpl\Release
+		rd /S /Q COPKG\gnulib\gnulib-lgplv2+\Release
+    ";
+};

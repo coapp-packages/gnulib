@@ -40,12 +40,10 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(SolutionDir);$(SolutionDir)..\..\build-aux\snippet;$(SolutionDir)..\..\lib;$(IncludePath)</IncludePath>
-    <TargetName>$(ProjectName)-vs10d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(SolutionDir);$(SolutionDir)..\..\build-aux\snippet;$(SolutionDir)..\..\lib;$(IncludePath)</IncludePath>
-    <TargetName>$(ProjectName)-vs10</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

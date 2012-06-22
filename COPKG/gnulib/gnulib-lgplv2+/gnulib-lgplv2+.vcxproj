@@ -41,12 +41,10 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(SolutionDir);$(SolutionDir)..\..\lib;$(SolutionDir)..\..\build-aux\snippet;$(IncludePath)</IncludePath>
-    <TargetName>$(ProjectName)-vs10d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir);$(SolutionDir)..\..\lib;$(IncludePath)</IncludePath>
-    <TargetName>$(ProjectName)-vs10</TargetName>
+    <IncludePath>$(SolutionDir);$(SolutionDir)..\..\lib;$(SolutionDir)..\..\build-aux\snippet;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -102,9 +100,10 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\build-aux\snippet\arg-nonnull.h" />
     <ClInclude Include="..\..\..\build-aux\snippet\c++defs.h" />
+    <ClInclude Include="..\..\..\build-aux\snippet\unused-parameter.h" />
     <ClInclude Include="..\..\..\build-aux\snippet\warn-on-use.h" />
     <ClInclude Include="..\..\..\lib\alignof.h" />
-    <ClInclude Include="..\..\..\lib\unused-parameter.h" />
+    <ClInclude Include="..\..\..\lib\regex.h" />
     <ClInclude Include="..\..\..\lib\verify.h" />
     <ClInclude Include="..\alloca.h" />
     <ClInclude Include="..\config.h" />
